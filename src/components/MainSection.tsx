@@ -1,4 +1,6 @@
 import { FunctionComponent } from "react";
+import AddToCart from "./AddToCart";
+import Quantity from "./Quantity";
 
 interface MainSectionProps {}
 
@@ -25,8 +27,8 @@ const MainSection: FunctionComponent<MainSectionProps> = () => {
           <p className="text-dark-grayish-blue text-lg line-through">$250.00</p>
         </div>
         <div className="flex flex-col sm:flex-row gap-4">
-          <div className="flex justify-between p-3 bg-light-grayish-blue rounded-md"></div>
-          <div className="flex justify-center bg-orange p-3 rounded-md"></div>
+          <Quantity />
+          <AddToCart />
         </div>
       </section>
     </>
