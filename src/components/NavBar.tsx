@@ -1,18 +1,18 @@
 import { FunctionComponent } from "react";
-import menuIcon from "../assets/images/icon-menu.svg";
 
 import Avatar from "./Avatar";
 import Cart from "./Cart";
+import DropdownMenu from "./DropdownMenu";
 
 interface NavBarProps {}
 
 const NavBar: FunctionComponent<NavBarProps> = () => {
   const menu = ["Collections", "Men", "Women", "About", "Contact"];
   return (
-    <>
+    <nav>
       <div className="flex justify-between items-baseline px-5 py-3 sm:p-0">
         <div className="flex justify-between items-center sm:items-start gap-4 sm:gap-10">
-          <img src={menuIcon} alt="" className="h-4 w-4 sm:hidden" />
+          <DropdownMenu items={menu} />
           <h1 className="m-0 text-3xl tracking-tighter leading-none">
             sneakers
           </h1>
@@ -36,7 +36,7 @@ const NavBar: FunctionComponent<NavBarProps> = () => {
         </div>
       </div>
       <hr className="hidden sm:block h-px bg-dark-grayish-blue border-0 m-0" />
-    </>
+    </nav>
   );
 };
 
