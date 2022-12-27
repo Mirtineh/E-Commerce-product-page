@@ -1,4 +1,5 @@
 import { FunctionComponent } from "react";
+import logo from "../assets/images/logo.svg";
 
 import Avatar from "./Avatar";
 import Cart from "./Cart";
@@ -10,12 +11,10 @@ const NavBar: FunctionComponent<NavBarProps> = () => {
   const menu = ["Collections", "Men", "Women", "About", "Contact"];
   return (
     <nav>
-      <div className="flex justify-between items-baseline px-5 py-3 sm:p-0">
+      <div className="flex justify-between items-center sm:items-baseline px-5 py-3 sm:p-0">
         <div className="flex justify-between items-center sm:items-start gap-4 sm:gap-10">
           <DropdownMenu items={menu} />
-          <h1 className="m-0 text-3xl tracking-tighter leading-none">
-            sneakers
-          </h1>
+          <img src={logo} alt="" />
           <div className="hidden sm:flex gap-6 text-dark-grayish-blue">
             {menu.map((menuItem) => (
               <div className="flex flex-col justify-between gap-11">

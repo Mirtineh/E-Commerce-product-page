@@ -10,7 +10,7 @@ const MainSection: FunctionComponent<MainSectionProps> = () => {
       <section className="flex sm:basis-5/12 items-center sm:m-0 w-full">
         <div className="h-fit w-full m-5 sm:m-0">
           <p className=" text-orange font-bold">SNEAKER COMPANY</p>
-          <h1 className="text-very-dark-blue text-3xl">
+          <h1 className="text-very-dark-blue text-3xl sm:text-4xl">
             Fall Limited Edition Sneakers
           </h1>
           <p className="text-dark-grayish-blue leading-relaxed">
@@ -20,12 +20,14 @@ const MainSection: FunctionComponent<MainSectionProps> = () => {
           </p>
           <div className="flex sm:flex-col justify-between items-center sm:items-start w-full">
             <div className="flex items-center gap-4">
-              <p className="text-very-dark-blue text-2xl font-bold">$125.00</p>
+              <p className="text-very-dark-blue text-2xl font-bold sm:m-0">
+                $125.00
+              </p>
               <div className="p-2 bg-pale-orange rounded-md text-orange font-bold">
                 50%
               </div>
             </div>
-            <p className="text-dark-grayish-blue text-lg line-through">
+            <p className="text-dark-grayish-blue text-lg line-through sm:mt-2 sm:mb-8">
               $250.00
             </p>
           </div>

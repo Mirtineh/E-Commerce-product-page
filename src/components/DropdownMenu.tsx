@@ -9,7 +9,7 @@ interface DropdownMenuProps {
 const DropdownMenu: FunctionComponent<DropdownMenuProps> = ({ items }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="sm:hidden">
+    <div className="sm:hidden h-full">
       {isOpen ? (
         <>
           <button
@@ -34,11 +34,13 @@ const DropdownMenu: FunctionComponent<DropdownMenuProps> = ({ items }) => {
           </div>
         </>
       ) : (
-        <img
-          src={menuIcon}
-          onClick={() => setIsOpen(true)}
-          className="h-4 w-4"
-        />
+        <div className="flex justify-center">
+          <img
+            src={menuIcon}
+            onClick={() => setIsOpen(true)}
+            className="h-full w-full"
+          />
+        </div>
       )}
     </div>
   );
