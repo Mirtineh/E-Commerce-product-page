@@ -5,7 +5,7 @@ interface AddToCartProps {}
 
 const AddToCart: FunctionComponent<AddToCartProps> = () => {
   return (
-    <button className="flex justify-center items-center gap-4 bg-orange p-3 rounded-lg text-white border-none hover:bg-opacity-50 hover:cursor-pointer">
+    <button className="flex basis-4/6 justify-center items-center gap-4 bg-orange shadow-2xl shadow-pale-orange p-3 rounded-lg text-white border-none hover:bg-opacity-50 hover:cursor-pointer">
       <img src={cartIcon} alt="" />
       <p className="m-0 font-bold text-lg">Add to cart</p>
     </button>

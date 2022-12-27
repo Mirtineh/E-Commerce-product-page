@@ -15,8 +15,8 @@ interface ImagesProps {}
 const Images: FunctionComponent<ImagesProps> = () => {
   return (
     <>
-      <div className="flex flex-col w-full gap-10">
-        <div className="relative w-full h-72">
+      <div className="flex basis-5/12 flex-col w-full gap-8">
+        <div className="relative w-full h-72 sm:h-[500px]">
           <img
             src={product1}
             className="object-cover w-full h-full sm:rounded-xl"
@@ -29,7 +29,7 @@ const Images: FunctionComponent<ImagesProps> = () => {
             <img src={nextIcon} alt="" className="w-3 h-3" />
           </div>
         </div>
-        <div className="hidden sm:flex justify-between w-full">
+        <div className="hidden sm:flex justify-between w-full gap-8">
           <div className="flex justify-center items-center">
             <img
               src={produc1thumb}
