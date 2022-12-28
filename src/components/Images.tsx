@@ -33,33 +33,37 @@ const Images: FunctionComponent<ImagesProps> = () => {
           </div>
         </div>
         <div className="hidden sm:flex justify-between w-full gap-8">
-          <div className="flex justify-center items-center">
+          <div className="flex relative items-center w-24 justify-center hover:cursor-pointer outline outline-orange rounded-xl group">
             <img
               src={produc1thumb}
               alt=""
-              className="w-full h-full object-cover rounded-xl"
+              className="flex-1 w-full h-full object-cover rounded-xl "
             />
+            <div className="absolute inset-0 bg-pale-orange bg-opacity-75 rounded-xl"></div>
           </div>
-          <div className="flex justify-center items-center">
+          <div className="flex relative items-center w-24 justify-center hover:cursor-pointer rounded-xl group">
             <img
               src={produc1thumb}
               alt=""
-              className="w-full h-full object-cover rounded-xl"
+              className="flex-1 w-full h-full object-cover rounded-xl "
             />
+            <div className="hidden group-hover:block absolute inset-0 bg-pale-orange bg-opacity-75 rounded-xl"></div>
           </div>
-          <div className="flex justify-center items-center">
+          <div className="flex relative items-center w-24 justify-center hover:cursor-pointer rounded-xl group">
             <img
               src={produc1thumb}
               alt=""
-              className="w-full h-full object-cover rounded-xl"
+              className="flex-1 w-full h-full object-cover rounded-xl "
             />
+            <div className="hidden group-hover:block absolute inset-0 bg-pale-orange bg-opacity-75 rounded-xl"></div>
           </div>
-          <div className="flex justify-center items-center">
+          <div className="flex relative items-center w-24 justify-center hover:cursor-pointer rounded-xl group">
             <img
               src={produc1thumb}
               alt=""
-              className="w-full h-full object-cover rounded-xl"
+              className="flex-1 w-full h-full object-cover rounded-xl "
             />
+            <div className="hidden group-hover:block absolute inset-0 bg-pale-orange bg-opacity-75 rounded-xl"></div>
           </div>
         </div>
       </div>
