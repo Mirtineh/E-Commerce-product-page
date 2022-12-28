@@ -4,6 +4,7 @@ import product1 from "../assets/images/image-product-1.jpg";
 import produc1thumb from "../assets/images/image-product-1-thumbnail.jpg";
 import nextIcon from "../assets/images/icon-next.svg";
 import previousIcon from "../assets/images/icon-previous.svg";
+import PreviousArrow from "./svgComponents/previousArrow";
 interface LightBoxProps {
   closeModal: () => void;
 }
@@ -28,8 +29,9 @@ const LightBox: FunctionComponent<LightBoxProps> = ({ closeModal }) => {
             <div className="absolute z-10 top-1/2 -left-6 flex justify-center items-center w-12 h-12 bg-white rounded-full hover:cursor-pointer">
               <img src={previousIcon} className="h-4 w-4" alt="" />
             </div>
-            <div className="absolute z-10 top-1/2 -right-6 flex justify-center items-center w-12 h-12 bg-white rounded-full hover:cursor-pointer">
-              <img src={nextIcon} className="h-4 w-4" alt="" />
+            <div className="absolute z-10 top-1/2 -right-6 flex justify-center items-center w-12 h-12 bg-white rounded-full hover:cursor-pointer group">
+              {/* <img src={nextIcon} className="h-4 w-4" alt="" /> */}
+              <PreviousArrow className="stroke-dark-grayish-blue group-hover:stroke-orange" />
             </div>
           </div>
 
