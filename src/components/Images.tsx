@@ -16,7 +16,7 @@ const Images: FunctionComponent<ImagesProps> = () => {
   return (
     <>
       <div className="flex basis-5/12 flex-col w-full gap-8">
-        <div className="relative w-full h-72 sm:h-[500px]">
+        <div className="relative -z-10 w-full h-72 sm:h-[500px]">
           <img
             src={product1}
             className="object-cover w-full h-full sm:rounded-xl"

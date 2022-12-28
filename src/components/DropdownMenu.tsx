@@ -13,11 +13,11 @@ const DropdownMenu: FunctionComponent<DropdownMenuProps> = ({ items }) => {
       {isOpen ? (
         <>
           <button
-            className="fixed inset-0 bg-black bg-opacity-75 cursor-default"
+            className="fixed z-10 inset-0 bg-black bg-opacity-75 cursor-default"
             onClick={() => setIsOpen(false)}
             tabIndex={-1}
           ></button>
-          <div className="fixed left-0 top-0 w-8/12 h-screen bg-white">
+          <div className="fixed z-20 left-0 top-0 w-8/12 h-screen bg-white">
             <div className="flex flex-col mx-8 mt-5">
               <img
                 src={closeIcon}
