@@ -8,13 +8,16 @@ const Cart: FunctionComponent<CartProps> = () => {
   const [cartOpen, setCartOpen] = useState(false);
   return (
     <>
-      <div className="relative w-6 h-6">
-        <img
-          src={cartIcon}
-          className="w-6 h-6 hover:cursor-pointer hover:text-very-dark-blue"
+      <div className="relative">
+        <div
+          className="relative w-6 h-6 hover:cursor-pointer hover:text-orange"
           onClick={() => setCartOpen(true)}
-          alt=""
-        />
+        >
+          <img src={cartIcon} className="w-6 h-6" alt="" />
+          <div className="absolute flex justify-center items-center px-1 bg-orange top-0 left-1/3 text-white rounded-md">
+            <p className="m-0 text-xs">3</p>
+          </div>
+        </div>
         {cartOpen ? (
           <>
             <button
@@ -22,7 +25,7 @@ const Cart: FunctionComponent<CartProps> = () => {
               tabIndex={-1}
               onClick={() => setCartOpen(false)}
             ></button>
-            <div className="absolute w-96 top-10 -left-44 bg-white shadow-xl rounded-md">
+            <div className="fixed sm:absolute w-fit sm:w-96 top-10 right-0 sm:-left-44 left-auto bg-white shadow-xl rounded-md">
               <p className="p-4">Cart</p>
               <hr />
               <div className="p-4 flex flex-col gap-5">
@@ -43,7 +46,10 @@ const Cart: FunctionComponent<CartProps> = () => {
                   </div>
                   <img src={deleteIcon} alt="" />
                 </div>
-                <div className="bg-orange text-center text-white rounded-md">
+                <div
+                  className="bg-orange hover:bg-pale-orange hover:cursor-pointer text-center text-white rounded-md"
+                  onClick={() => setCartOpen(false)}
+                >
                   <p>Checkout</p>
                 </div>
               </div>
