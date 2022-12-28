@@ -21,11 +21,11 @@ const Cart: FunctionComponent<CartProps> = () => {
         {cartOpen ? (
           <>
             <button
-              className="fixed inset-0 cursor-default bg-black bg-opacity-0 border-none"
+              className="fixed z-10 inset-0 cursor-default bg-black bg-opacity-0 border-none"
               tabIndex={-1}
               onClick={() => setCartOpen(false)}
             ></button>
-            <div className="fixed sm:absolute w-fit sm:w-96 top-10 right-0 sm:-left-44 left-auto bg-white shadow-xl rounded-md">
+            <div className="fixed sm:absolute z-10 w-fit sm:w-96 top-10 right-0 sm:-left-44 left-auto bg-white shadow-xl rounded-md">
               <p className="p-4">Cart</p>
               <hr />
               <div className="p-4 flex flex-col gap-5">
