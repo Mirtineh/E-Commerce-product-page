@@ -7,7 +7,7 @@ interface MainSectionProps {}
 const MainSection: FunctionComponent<MainSectionProps> = () => {
   return (
     <>
-      <section className="flex sm:basis-5/12 items-center sm:m-0 w-full">
+      <section className="flex basis-5/12 items-center sm:m-0 w-full">
         <div className="h-fit w-full m-5 sm:m-0">
           <p className=" text-orange font-bold">SNEAKER COMPANY</p>
           <h1 className="text-very-dark-blue text-3xl sm:text-4xl">

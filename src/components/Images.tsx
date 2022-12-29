@@ -17,7 +17,7 @@ const Images: FunctionComponent<ImagesProps> = () => {
   const [isModalOpen, setModalOpen] = useState(false);
   return (
     <>
-      <div className="flex basis-5/12 flex-col w-full gap-8">
+      <div className="flex flex-initial basis-5/12 flex-col w-full gap-8">
         <div className="relative z-0 w-full h-72 sm:h-[500px]">
           <img
             src={product1}
@@ -33,7 +33,7 @@ const Images: FunctionComponent<ImagesProps> = () => {
           </div>
         </div>
         <div className="hidden sm:flex justify-between w-full gap-8">
-          <div className="flex relative items-center w-24 justify-center hover:cursor-pointer outline outline-orange rounded-xl group">
+          <div className="flex relative items-center w-full justify-center hover:cursor-pointer outline outline-orange rounded-xl group">
             <img
               src={produc1thumb}
               alt=""
@@ -41,7 +41,7 @@ const Images: FunctionComponent<ImagesProps> = () => {
             />
             <div className="absolute inset-0 bg-pale-orange bg-opacity-75 rounded-xl"></div>
           </div>
-          <div className="flex relative items-center w-24 justify-center hover:cursor-pointer rounded-xl group">
+          <div className="flex relative items-center w-full justify-center hover:cursor-pointer rounded-xl group">
             <img
               src={produc1thumb}
               alt=""
@@ -49,7 +49,7 @@ const Images: FunctionComponent<ImagesProps> = () => {
             />
             <div className="hidden group-hover:block absolute inset-0 bg-pale-orange bg-opacity-75 rounded-xl"></div>
           </div>
-          <div className="flex relative items-center w-24 justify-center hover:cursor-pointer rounded-xl group">
+          <div className="flex relative items-center w-full justify-center hover:cursor-pointer rounded-xl group">
             <img
               src={produc1thumb}
               alt=""
@@ -57,7 +57,7 @@ const Images: FunctionComponent<ImagesProps> = () => {
             />
             <div className="hidden group-hover:block absolute inset-0 bg-pale-orange bg-opacity-75 rounded-xl"></div>
           </div>
-          <div className="flex relative items-center w-24 justify-center hover:cursor-pointer rounded-xl group">
+          <div className="flex relative items-center w-full justify-center hover:cursor-pointer rounded-xl group">
             <img
               src={produc1thumb}
               alt=""
