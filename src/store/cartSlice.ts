@@ -11,12 +11,15 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action: PayloadAction<number>) => {
-      state.quantity += action.payload;
+      state.quantity = action.payload;
+    },
+    emptyCart: (state) => {
+      state.quantity = 0;
     },
   },
 });
 //Action Creaters
-export const { addToCart } = cartSlice.actions;
+export const { addToCart, emptyCart } = cartSlice.actions;
 //Selectors
 export const selectQuantity = (state: RootState) => state.quantity;
 //Reducer

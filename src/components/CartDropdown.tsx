@@ -3,7 +3,7 @@ import deleteIcon from "../assets/images/icon-delete.svg";
 import product1thumbnail from "../assets/images/image-product-1-thumbnail.jpg";
 import Quantity from "./Quantity";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
-import { selectQuantity } from "../store/cartSlice";
+import { emptyCart, selectQuantity } from "../store/cartSlice";
 
 interface CartDropdownProps {
   closeCart: () => void;
@@ -11,6 +11,7 @@ interface CartDropdownProps {
 
 const CartDropdown: FunctionComponent<CartDropdownProps> = ({ closeCart }) => {
   const quantity = useAppSelector(selectQuantity);
+  const dispatch = useAppDispatch();
   return (
     <>
       <button
@@ -34,13 +35,18 @@ const CartDropdown: FunctionComponent<CartDropdownProps> = ({ closeCart }) => {
                 <div className="flex flex-col self-stretch justify-around text-dark-grayish-blue">
                   <p className="m-0">Fall Limited Edition Sneakers</p>
                   <p className="m-0">
-                    $125.00 X 3{" "}
+                    $125.00 X {quantity}{" "}
                     <span className="text-very-dark-blue font-bold">
-                      $375.00
+                      ${(125.0 * quantity).toFixed(2)}
                     </span>
                   </p>
                 </div>
-                <img src={deleteIcon} alt="" />
+                <img
+                  src={deleteIcon}
+                  className="hover:cursor-pointer"
+                  alt=""
+                  onClick={() => dispatch(emptyCart())}
+                />
               </div>
               <div
                 className="bg-orange hover:bg-pale-orange hover:cursor-pointer text-center text-white rounded-md"

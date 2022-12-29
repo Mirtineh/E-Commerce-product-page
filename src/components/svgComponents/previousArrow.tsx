@@ -14,12 +14,7 @@ const PreviousArrow: FunctionComponent<PreviousArrowProps> = ({
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      <path
-        d="M11 1 3 9l8 8"
-        stroke-width="3"
-        fill="none"
-        fill-rule="evenodd"
-      />
+      <path d="M11 1 3 9l8 8" strokeWidth="3" fill="none" fillRule="evenodd" />
     </svg>
   );
 };
