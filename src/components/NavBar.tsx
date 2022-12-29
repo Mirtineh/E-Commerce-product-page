@@ -34,7 +34,7 @@ const NavBar: FunctionComponent<NavBarProps> = () => {
           <Avatar />
         </div>
       </div>
-      <hr className="hidden sm:block h-px bg-dark-grayish-blue border-0 m-0" />
+      <hr className="hidden sm:block h-px bg-dark-grayish-blue bg-opacity-30 border-0 m-0" />
     </nav>
   );
 };

@@ -1,13 +1,22 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useEffect, useState } from "react";
+import { addToCart, selectQuantity } from "../store/cartSlice";
+import { useAppDispatch, useAppSelector } from "../store/hooks";
 import AddToCart from "./AddToCart";
 import Quantity from "./Quantity";
 
 interface MainSectionProps {}
 
 const MainSection: FunctionComponent<MainSectionProps> = () => {
+  const quantity = useAppSelector(selectQuantity);
+  const dispatch = useAppDispatch();
+  const [amount, setAmount] = useState(quantity);
+  useEffect(() => {
+    setAmount(quantity);
+  }, [quantity]);
+
   return (
     <>
-      <section className="flex sm:basis-5/12 items-center sm:m-0 w-full">
+      <section className="flex basis-5/12 items-center sm:m-0 w-full">
         <div className="h-fit w-full m-5 sm:m-0">
           <p className=" text-orange font-bold">SNEAKER COMPANY</p>
           <h1 className="text-very-dark-blue text-3xl sm:text-4xl">
@@ -32,8 +41,12 @@ const MainSection: FunctionComponent<MainSectionProps> = () => {
             </p>
           </div>
           <div className="flex flex-col w-full sm:flex-row gap-4">
-            <Quantity />
-            <AddToCart />
+            <Quantity
+              quantity={amount}
+              onDecrease={() => setAmount((prev) => prev - 1)}
+              onIncrease={() => setAmount((prev) => prev + 1)}
+            />
+            <AddToCart onClick={() => dispatch(addToCart(amount))} />
           </div>
         </div>
       </section>
