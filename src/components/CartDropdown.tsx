@@ -19,7 +19,7 @@ const CartDropdown: FunctionComponent<CartDropdownProps> = ({ closeCart }) => {
         tabIndex={-1}
         onClick={() => closeCart()}
       ></button>
-      <div className="fixed flex flex-col sm:absolute z-10 w-[370px] h-72 top-24 sm:top-10 inset-x-0 mx-auto sm:-left-44 bg-white shadow-xl rounded-md">
+      <div className="fixed flex flex-col sm:absolute z-10 w-[370px] h-72 top-16 sm:top-10 inset-x-0 mx-auto sm:-left-44 bg-white shadow-xl rounded-md">
         <p className="p-4">Cart</p>
         <hr className="h-px bg-dark-grayish-blue bg-opacity-30 border-0 m-0" />
         {quantity > 0 ? (
