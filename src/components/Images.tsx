@@ -17,7 +17,7 @@ const Images: FunctionComponent<ImagesProps> = () => {
             src={largeImages[imageIndex]}
             className="object-cover w-full h-full sm:rounded-xl hover:cursor-pointer"
             onClick={() => setModalOpen(true)}
-            alt=""
+            alt="main-image"
           />
           <div
             className="absolute sm:hidden flex justify-center items-center w-9 h-9 top-1/2 left-4 bg-white rounded-full"
@@ -28,7 +28,7 @@ const Images: FunctionComponent<ImagesProps> = () => {
               })
             }
           >
-            <img src={previousIcon} alt="" className="w-3 h-3" />
+            <img src={previousIcon} alt="previous" className="w-3 h-3" />
           </div>
           <div
             className="absolute sm:hidden flex justify-center items-center w-9 h-9 top-1/2 right-4 bg-white rounded-full"
@@ -39,7 +39,7 @@ const Images: FunctionComponent<ImagesProps> = () => {
               })
             }
           >
-            <img src={nextIcon} alt="" className="w-3 h-3" />
+            <img src={nextIcon} alt="next" className="w-3 h-3" />
           </div>
         </div>
         <div className="hidden sm:flex justify-between w-full gap-8">
@@ -53,7 +53,7 @@ const Images: FunctionComponent<ImagesProps> = () => {
                 >
                   <img
                     src={image}
-                    alt=""
+                    alt="thumbnails"
                     className="flex-1 w-full h-full object-cover rounded-xl "
                   />
                   <div className="absolute inset-0 bg-pale-orange bg-opacity-75 rounded-xl"></div>
@@ -68,7 +68,7 @@ const Images: FunctionComponent<ImagesProps> = () => {
               >
                 <img
                   src={image}
-                  alt=""
+                  alt="thumbnails"
                   className="flex-1 w-full h-full object-cover rounded-xl "
                 />
                 <div className="hidden group-hover:block absolute inset-0 bg-pale-orange bg-opacity-75 rounded-xl"></div>

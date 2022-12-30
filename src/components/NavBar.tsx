@@ -14,7 +14,7 @@ const NavBar: FunctionComponent<NavBarProps> = () => {
       <div className="flex justify-between items-center sm:items-baseline px-5 py-3 sm:p-0">
         <div className="flex justify-between items-center sm:items-start gap-4 sm:gap-10">
           <DropdownMenu items={menu} />
-          <img src={logo} alt="" />
+          <img src={logo} alt="logo" />
           <div className="hidden sm:flex gap-6 text-dark-grayish-blue">
             {menu.map((menuItem) => (
               <div

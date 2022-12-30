@@ -21,7 +21,7 @@ const DropdownMenu: FunctionComponent<DropdownMenuProps> = ({ items }) => {
             <div className="flex flex-col mx-8 mt-5">
               <img
                 src={closeIcon}
-                alt=""
+                alt="close"
                 className="w-4 h-4 mb-8"
                 onClick={() => setIsOpen(false)}
               />
@@ -37,6 +37,7 @@ const DropdownMenu: FunctionComponent<DropdownMenuProps> = ({ items }) => {
         <div className="flex justify-center">
           <img
             src={menuIcon}
+            alt="menu"
             onClick={() => setIsOpen(true)}
             className="h-full w-full"
           />

@@ -29,7 +29,7 @@ const CartDropdown: FunctionComponent<CartDropdownProps> = ({ closeCart }) => {
               <div className="flex items-center gap-3">
                 <img
                   src={product1thumbnail}
-                  alt=""
+                  alt="product"
                   className="h-16 w-16 rounded-md"
                 />
                 <div className="flex flex-col self-stretch justify-around text-dark-grayish-blue">
@@ -44,7 +44,7 @@ const CartDropdown: FunctionComponent<CartDropdownProps> = ({ closeCart }) => {
                 <img
                   src={deleteIcon}
                   className="hover:cursor-pointer"
-                  alt=""
+                  alt="Delete"
                   onClick={() => dispatch(emptyCart())}
                 />
               </div>
