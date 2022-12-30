@@ -12,7 +12,7 @@ const AddToCart: FunctionComponent<AddToCartProps> = ({ onClick }) => {
       onClick={() => onClick()}
     >
       <CartIcon className="fill-white" />
-      <p className="m-0 font-bold text-lg">Add to cart</p>
+      <span className="m-0 font-bold text-lg">Add to cart</span>
     </button>
   );
 };

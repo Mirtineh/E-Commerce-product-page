@@ -8,9 +8,7 @@ import { Provider } from "react-redux";
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <Provider store={store}>
-      <main>
-        <App />
-      </main>
+      <App />
       <footer>
         <div className="text-center text-very-dark-blue">
           <span>Challenge by </span>

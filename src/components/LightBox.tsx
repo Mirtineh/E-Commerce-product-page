@@ -28,7 +28,7 @@ const LightBox: FunctionComponent<LightBoxProps> = ({ closeModal }) => {
             <img
               src={largeImages[imageIndex]}
               className="w-full rounded-2xl"
-              alt=""
+              alt="mani-image"
             />
 
             <div
@@ -65,7 +65,7 @@ const LightBox: FunctionComponent<LightBoxProps> = ({ closeModal }) => {
                   >
                     <img
                       src={image}
-                      alt=""
+                      alt="thumbnails"
                       className="flex-1 w-full h-full object-cover rounded-xl "
                     />
                     <div className="absolute inset-0 bg-pale-orange bg-opacity-75 rounded-xl"></div>
@@ -80,7 +80,7 @@ const LightBox: FunctionComponent<LightBoxProps> = ({ closeModal }) => {
                 >
                   <img
                     src={image}
-                    alt=""
+                    alt="thumbnails"
                     className="flex-1 w-full h-full object-cover rounded-xl "
                   />
                   <div className="hidden group-hover:block absolute inset-0 bg-pale-orange bg-opacity-75 rounded-xl"></div>

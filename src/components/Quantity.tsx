@@ -19,15 +19,17 @@ const Quantity: FunctionComponent<QuantityProps> = ({
         className="px-3 self-stretch flex justify-center items-center hover:cursor-pointer border-none bg-black bg-opacity-0"
         disabled={quantity == 0 ? true : false}
         onClick={() => onDecrease()}
+        aria-label="decrease quantity"
       >
-        <img src={minusIcon} alt="" className="" />
+        <img src={minusIcon} alt="decrease-quantity" className="" />
       </button>
       <p className="text-very-dark-blue font-bold">{quantity}</p>
       <button
         className="px-3 self-stretch flex justify-center items-center hover:cursor-pointer border-none bg-black bg-opacity-0"
         onClick={() => onIncrease()}
+        aria-label="increase quantity"
       >
-        <img src={plusIcon} alt="" className="" />
+        <img src={plusIcon} alt="increase-quantity" className="" />
       </button>
     </div>
   );
