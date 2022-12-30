@@ -21,13 +21,23 @@ const Images: FunctionComponent<ImagesProps> = () => {
           />
           <div
             className="absolute sm:hidden flex justify-center items-center w-9 h-9 top-1/2 left-4 bg-white rounded-full"
-            onClick={() => setImageIndex((prev) => prev - 1)}
+            onClick={() =>
+              setImageIndex((prev) => {
+                if (prev === 0) return thumbnailImages.length - 1;
+                return prev - 1;
+              })
+            }
           >
             <img src={previousIcon} alt="" className="w-3 h-3" />
           </div>
           <div
             className="absolute sm:hidden flex justify-center items-center w-9 h-9 top-1/2 right-4 bg-white rounded-full"
-            onClick={() => setImageIndex((prev) => prev + 1)}
+            onClick={() =>
+              setImageIndex((prev) => {
+                if (prev === thumbnailImages.length - 1) return 0;
+                return prev + 1;
+              })
+            }
           >
             <img src={nextIcon} alt="" className="w-3 h-3" />
           </div>

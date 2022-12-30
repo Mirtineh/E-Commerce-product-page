@@ -8,7 +8,7 @@ interface LightBoxProps {
 }
 
 const LightBox: FunctionComponent<LightBoxProps> = ({ closeModal }) => {
-  const [imageIndex, setimageIndex] = useState(0);
+  const [imageIndex, setImageIndex] = useState(0);
   return (
     <>
       <div className="hidden fixed inset-0 z-10 sm:flex justify-center items-center ">
@@ -31,13 +31,23 @@ const LightBox: FunctionComponent<LightBoxProps> = ({ closeModal }) => {
             />
             <div
               className="absolute z-10 top-1/2 -left-6 flex justify-center items-center w-12 h-12 bg-white rounded-full hover:cursor-pointer group"
-              onClick={() => setimageIndex((prev) => prev - 1)}
+              onClick={() =>
+                setImageIndex((prev) => {
+                  if (prev === 0) return thumbnailImages.length - 1;
+                  return prev - 1;
+                })
+              }
             >
               <PreviousArrow className="stroke-dark-grayish-blue group-hover:stroke-orange" />
             </div>
             <div
               className="absolute z-10 top-1/2 -right-6 flex justify-center items-center w-12 h-12 bg-white rounded-full hover:cursor-pointer group"
-              onClick={() => setimageIndex((prev) => prev + 1)}
+              onClick={() =>
+                setImageIndex((prev) => {
+                  if (prev === thumbnailImages.length - 1) return 0;
+                  return prev + 1;
+                })
+              }
             >
               <NextArrow className="stroke-dark-grayish-blue group-hover:stroke-orange" />
             </div>
