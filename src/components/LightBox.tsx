@@ -75,6 +75,7 @@ const LightBox: FunctionComponent<LightBoxProps> = ({ closeModal }) => {
                 <div
                   className="flex relative items-center w-24 justify-center hover:cursor-pointer rounded-xl group"
                   key={image}
+                  onClick={() => setImageIndex(index)}
                 >
                   <img
                     src={image}
