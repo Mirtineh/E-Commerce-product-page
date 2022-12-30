@@ -13,7 +13,8 @@ const LightBox: FunctionComponent<LightBoxProps> = ({ closeModal }) => {
     <>
       <div className="hidden fixed inset-0 z-10 sm:flex justify-center items-center ">
         <button
-          className="fixed inset-0 z-10 bg-black bg-opacity-75"
+          className="fixed inset-0 z-10 w-full h-full bg-black bg-opacity-75 border-none"
+          tabIndex={-1}
           onClick={() => closeModal()}
         ></button>
         <div className="flex flex-col items-center gap-5 w-1/3 h-fit z-10">

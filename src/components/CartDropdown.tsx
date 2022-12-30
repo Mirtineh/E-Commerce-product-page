@@ -15,7 +15,7 @@ const CartDropdown: FunctionComponent<CartDropdownProps> = ({ closeCart }) => {
   return (
     <>
       <button
-        className="fixed z-10 inset-0 cursor-default bg-black bg-opacity-0 border-none"
+        className="fixed z-10 inset-0 w-full h-full cursor-default bg-black bg-opacity-0 border-none"
         tabIndex={-1}
         onClick={() => closeCart()}
       ></button>
