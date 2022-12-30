@@ -29,6 +29,7 @@ const LightBox: FunctionComponent<LightBoxProps> = ({ closeModal }) => {
               className="w-full rounded-2xl"
               alt=""
             />
+
             <div
               className="absolute z-10 top-1/2 -left-6 flex justify-center items-center w-12 h-12 bg-white rounded-full hover:cursor-pointer group"
               onClick={() =>
@@ -57,7 +58,10 @@ const LightBox: FunctionComponent<LightBoxProps> = ({ closeModal }) => {
             {thumbnailImages.map((image, index) => {
               if (index === imageIndex) {
                 return (
-                  <div className="flex relative items-center w-24 justify-center hover:cursor-pointer outline outline-orange rounded-xl group">
+                  <div
+                    className="flex relative items-center w-24 justify-center hover:cursor-pointer outline outline-orange rounded-xl group"
+                    key={image}
+                  >
                     <img
                       src={image}
                       alt=""
@@ -68,7 +72,10 @@ const LightBox: FunctionComponent<LightBoxProps> = ({ closeModal }) => {
                 );
               }
               return (
-                <div className="flex relative items-center w-24 justify-center hover:cursor-pointer rounded-xl group">
+                <div
+                  className="flex relative items-center w-24 justify-center hover:cursor-pointer rounded-xl group"
+                  key={image}
+                >
                   <img
                     src={image}
                     alt=""

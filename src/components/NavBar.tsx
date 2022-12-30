@@ -17,7 +17,10 @@ const NavBar: FunctionComponent<NavBarProps> = () => {
           <img src={logo} alt="" />
           <div className="hidden sm:flex gap-6 text-dark-grayish-blue">
             {menu.map((menuItem) => (
-              <div className="flex flex-col justify-between gap-11">
+              <div
+                className="flex flex-col justify-between gap-11"
+                key={menuItem}
+              >
                 <p
                   key={menuItem}
                   className="hover:cursor-pointer hover:text-very-dark-blue peer m-0"

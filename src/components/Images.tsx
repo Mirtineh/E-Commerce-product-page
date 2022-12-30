@@ -48,6 +48,7 @@ const Images: FunctionComponent<ImagesProps> = () => {
               return (
                 <div
                   className="flex relative items-center w-full justify-center hover:cursor-pointer outline outline-orange rounded-xl group"
+                  key={image}
                   onClick={() => setImageIndex(index)}
                 >
                   <img
@@ -63,6 +64,7 @@ const Images: FunctionComponent<ImagesProps> = () => {
               <div
                 className="flex relative items-center w-full justify-center hover:cursor-pointer rounded-xl group"
                 onClick={() => setImageIndex(index)}
+                key={image}
               >
                 <img
                   src={image}

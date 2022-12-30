@@ -12,7 +12,7 @@ const NextArrow: FunctionComponent<NextArrowProps> = ({ className }) => {
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      <path d="m2 1 8 8-8 8" stroke-width="3" fill="none" fill-rule="evenodd" />
+      <path d="m2 1 8 8-8 8" strokeWidth="3" fill="none" fillRule="evenodd" />
     </svg>
   );
 };
